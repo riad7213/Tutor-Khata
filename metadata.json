@@ -1,0 +1,6 @@
+{
+  "name": "Tutor Khata",
+  "description": "Smart mobile ledger for private tutors to log classes and track student tuition payments in BDT.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

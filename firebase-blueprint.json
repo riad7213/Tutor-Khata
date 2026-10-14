@@ -1,0 +1,102 @@
+{
+  "entities": {
+    "Student": {
+      "title": "Student",
+      "description": "A student managed by the tutor",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "guardianName": { "type": "string" },
+        "phone": { "type": "string" },
+        "subject": { "type": "string" },
+        "grade": { "type": "string" },
+        "address": { "type": "string" },
+        "status": { "type": "string", "enum": ["active", "paused", "ended"] },
+        "startDate": { "type": "string" },
+        "notes": { "type": "string" },
+        "billingType": { "type": "string", "enum": ["monthly", "per_session"] },
+        "monthlyFee": { "type": "integer" },
+        "perSessionFee": { "type": "integer" },
+        "billingDay": { "type": "integer" },
+        "schedule": { "type": "array" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" },
+        "deletedAt": { "type": "string" }
+      },
+      "required": ["id", "name", "phone", "subject", "status", "startDate", "billingType", "billingDay"]
+    },
+    "Session": {
+      "title": "Session",
+      "description": "A class session logged for a student",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentId": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "status": { "type": "string", "enum": ["held", "cancelled_by_student", "cancelled_by_tutor", "makeup"] },
+        "feeOverride": { "type": "integer" },
+        "note": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" },
+        "deletedAt": { "type": "string" }
+      },
+      "required": ["id", "studentId", "date", "time", "status"]
+    },
+    "Payment": {
+      "title": "Payment",
+      "description": "A payment recorded from a student",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentId": { "type": "string" },
+        "amount": { "type": "integer" },
+        "date": { "type": "string" },
+        "method": { "type": "string", "enum": ["cash", "bKash", "Nagad", "bank", "other"] },
+        "note": { "type": "string" },
+        "allocatedTo": { "type": "array" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" },
+        "deletedAt": { "type": "string" }
+      },
+      "required": ["id", "studentId", "amount", "date", "method"]
+    },
+    "Settings": {
+      "title": "Settings",
+      "description": "User tutor settings",
+      "type": "object",
+      "properties": {
+        "currency": { "type": "string" },
+        "currencySymbol": { "type": "string" },
+        "billingDayDefault": { "type": "integer" },
+        "theme": { "type": "string" },
+        "reminderTemplate": { "type": "string" },
+        "lastBackupAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "/users/{userId}/students/{studentId}": {
+      "schema": "Student",
+      "description": "Students collection for a user"
+    },
+    "/users/{userId}/sessions/{sessionId}": {
+      "schema": "Session",
+      "description": "Sessions collection for a user"
+    },
+    "/users/{userId}/payments/{paymentId}": {
+      "schema": "Payment",
+      "description": "Payments collection for a user"
+    },
+    "/users/{userId}/settings/{settingId}": {
+      "schema": "Settings",
+      "description": "Tutor settings doc"
+    },
+    "/users/{userId}/backups/{date}": {
+      "schema": { "$ref": "#/entities/Settings" },
+      "description": "Automatic daily backups"
+    }
+  }
+}

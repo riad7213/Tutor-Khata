@@ -1,0 +1,73 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Graduation Cap: Skull Cap Underside (Soft Slate Blue/Grey #8C9DA8) -->
+    <path
+        android:fillColor="#8C9DA8"
+        android:pathData="M40.5,35 L40.5,43.5 C40.5,47.5 67.5,47.5 67.5,43.5 L67.5,35 C61.5,38 46.5,38 40.5,35 Z" />
+
+    <!-- Graduation Cap: Mortarboard Diamond Top (Slate Charcoal Grey #536471) -->
+    <path
+        android:fillColor="#536471"
+        android:pathData="M54,22 L79,31 L54,40 L29,31 Z" />
+
+    <!-- Graduation Cap: Tassel Cord -->
+    <path
+        android:strokeColor="#536471"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:pathData="M76.5,32 L76.5,47" />
+
+    <!-- Graduation Cap: Tassel End Bead -->
+    <path
+        android:fillColor="#536471"
+        android:pathData="M76.5,49.5 m-2.2,0 a2.2,2.2 0 1,0 4.4,0 a2.2,2.2 0 1,0 -4.4,0" />
+
+    <!-- Open Book: Left Page (Dark Slate Charcoal Grey #536471) -->
+    <path
+        android:fillColor="#536471"
+        android:pathData="M30.5,51 C37.5,50.5 45,52 52.5,53 L52.5,84.5 C45,83 37.5,84.5 30.5,82.5 Z" />
+
+    <!-- Open Book: Left Page 3 Horizontal White Lines -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.6"
+        android:strokeLineCap="round"
+        android:pathData="M35,58.5 L48,58.5" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.6"
+        android:strokeLineCap="round"
+        android:pathData="M35,65.5 L48,65.5" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.6"
+        android:strokeLineCap="round"
+        android:pathData="M35,72.5 L48,72.5" />
+
+    <!-- Open Book: Right Page (Soft Slate Blue/Grey #8C9DA8) -->
+    <path
+        android:fillColor="#8C9DA8"
+        android:pathData="M55.5,53 C63,52 70.5,50.5 77.5,51 L77.5,82.5 C70.5,84.5 63,83 55.5,84.5 Z" />
+
+    <!-- Open Book: Right Page 3 Horizontal White Lines (Matching Left Page) -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.6"
+        android:strokeLineCap="round"
+        android:pathData="M60,58.5 L73,58.5" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.6"
+        android:strokeLineCap="round"
+        android:pathData="M60,65.5 L73,65.5" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.6"
+        android:strokeLineCap="round"
+        android:pathData="M60,72.5 L73,72.5" />
+
+</vector>
